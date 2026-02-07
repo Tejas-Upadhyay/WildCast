@@ -1,0 +1,92 @@
+import React from 'react';
+
+// Using a 2026 Bento Grid Layout
+const WildCastBento = () => {
+return (
+<div className="min-h-screen bg-[#0a0a0a] text-white selection:bg-orange-500/30 font-sans p-4 md:p-8">
+    {/* Header / Nav */}
+    <header
+        className="max-w-7xl mx-auto flex justify-between items-center mb-12 backdrop-blur-md bg-white/5 p-4 rounded-2xl border border-white/10">
+        <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-orange-600 rounded-lg flex items-center justify-center font-black text-xl">W
+            </div>
+            <span className="text-xl font-bold tracking-tight">WILDCAST</span>
+        </div>
+        <nav className="hidden md:flex gap-8 text-sm font-medium text-gray-400">
+            <a href="#" className="hover:text-white transition-colors">Episodes</a>
+            <a href="#" className="hover:text-white transition-colors">Sponsors</a>
+            <a href="#" className="hover:text-white transition-colors">Team</a>
+        </nav>
+        <button
+            className="bg-orange-600 hover:bg-orange-500 text-white px-5 py-2 rounded-xl text-sm font-bold transition-all shadow-[0_0_20px_rgba(234,88,12,0.3)]">
+            Join the Cast
+        </button>
+    </header>
+
+    {/* Bento Grid */}
+    <main className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 h-full">
+
+        {/* Main Hero Card */}
+        <div
+            className="md:col-span-2 md:row-span-2 bg-gradient-to-br from-orange-600 to-orange-800 rounded-[2rem] p-8 md:p-12 flex flex-col justify-end relative overflow-hidden group">
+            <div
+                className="absolute top-0 right-0 p-8 opacity-20 group-hover:scale-110 transition-transform duration-700">
+                <svg width="200" height="200" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 14.5c-2.49 0-4.5-2.01-4.5-4.5S9.51 7.5 12 7.5s4.5 2.01 4.5 4.5-2.01 4.5-4.5 4.5z" />
+                </svg>
+            </div>
+            <h1 className="text-5xl md:text-7xl font-black leading-none mb-6">ESTERO'S<br />FINEST.</h1>
+            <p className="text-lg text-white/80 max-w-sm mb-8">Capturing the stories of Estero High School through
+                student-led conversations and local insights.</p>
+            <div className="flex gap-4">
+                <button className="bg-white text-black px-6 py-3 rounded-full font-bold text-sm">Latest Episode</button>
+                <button
+                    className="bg-black/20 backdrop-blur-md text-white border border-white/20 px-6 py-3 rounded-full font-bold text-sm">Our
+                    Mission</button>
+            </div>
+        </div>
+
+        {/* YouTube Card */}
+        <div
+            className="md:col-span-2 bg-[#161616] border border-white/10 rounded-[2rem] p-6 flex flex-col justify-between hover:border-orange-500/50 transition-colors">
+            <div className="flex justify-between items-start mb-4">
+                <span className="text-xs font-bold text-orange-500 uppercase tracking-widest">Featured Video</span>
+                <div className="w-2 h-2 rounded-full bg-red-600 animate-pulse"></div>
+            </div>
+            <div className="aspect-video bg-black rounded-xl overflow-hidden shadow-2xl">
+                <iframe className="w-full h-full" src="https://www.youtube.com/embed/LIVE_STREAM_ID_HERE"
+                    frameBorder="0" allowFullScreen></iframe>
+            </div>
+        </div>
+
+        {/* Sponsor/LinkedIn Card */}
+        <div className="bg-[#161616] border border-white/10 rounded-[2rem] p-8 flex flex-col justify-between group">
+            <div className="text-4xl">💼</div>
+            <div>
+                <h3 className="text-xl font-bold mb-2">Partner with WildCast</h3>
+                <p className="text-sm text-gray-400">Reach 1,500+ students and local Estero families.</p>
+            </div>
+            <a href="#" className="text-orange-500 font-bold flex items-center gap-2 group-hover:gap-4 transition-all">
+                View Deck <span>→</span>
+            </a>
+        </div>
+
+        {/* Stats Card */}
+        <div className="bg-white rounded-[2rem] p-8 flex flex-col justify-between text-black">
+            <span className="text-sm font-bold uppercase opacity-50">Impact</span>
+            <div className="leading-none">
+                <div className="text-5xl font-black">2.4k</div>
+                <div className="text-sm font-bold">Monthly Views</div>
+            </div>
+            <div className="h-1 bg-black/10 rounded-full overflow-hidden">
+                <div className="w-3/4 h-full bg-orange-600"></div>
+            </div>
+        </div>
+
+    </main>
+</div>
+);
+};
+
+export default WildCastBento;
